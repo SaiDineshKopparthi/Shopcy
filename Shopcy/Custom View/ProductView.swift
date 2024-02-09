@@ -17,6 +17,21 @@ class ProductView: UIView {
     
     @IBOutlet weak var productIMG: UIImageView!
     
+    override init(frame: CGRect){
+        super.init(frame: frame)
+        self.setUpXibView()
+    }
     
+    required init?(coder: NSCoder){
+        super.init(coder: coder)
+        self.setUpXibView()
+    }
+    
+    private func setUpXibView(){
+        guard let viewOfXib = Bundle.main.loadNibNamed("ProductView", owner: self)![0] as? UIView else {return}
+        
+        viewOfXib.frame = self.bounds
+        self.addSubview(viewOfXib)
+    }
 
 }
