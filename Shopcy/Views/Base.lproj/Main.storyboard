@@ -37,39 +37,39 @@
                                 <rect key="frame" x="30" y="205" width="333" height="583"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lNu-S6-8we" customClass="LottieAnimationView" customModule="Lottie">
-                                        <rect key="frame" x="0.0" y="0.0" width="333" height="233.33333333333334"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="333" height="248"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="O6X-yJ-HLC" userLabel="Actions SV">
-                                        <rect key="frame" x="0.0" y="241.33333333333329" width="333" height="341.66666666666674"/>
+                                        <rect key="frame" x="0.0" y="256" width="333" height="327"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eqn-Qa-r4x">
-                                                <rect key="frame" x="0.0" y="0.0" width="333" height="61.666666666666664"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="333" height="59"/>
                                                 <color key="backgroundColor" red="0.80504261359999996" green="0.80711866259999998" blue="0.93225524479999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GSk-JY-Zfu">
-                                                <rect key="frame" x="0.0" y="69.666666666666686" width="333" height="62"/>
+                                                <rect key="frame" x="0.0" y="67" width="333" height="59"/>
                                                 <color key="backgroundColor" red="0.80504261363636365" green="0.80711866258741261" blue="0.93225524475524479" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LS2-KX-aO6">
-                                                <rect key="frame" x="0.0" y="139.66666666666669" width="333" height="62"/>
+                                                <rect key="frame" x="0.0" y="134" width="333" height="59"/>
                                                 <color key="tintColor" red="0.42979676569790204" green="0.35189029724265736" blue="0.93225524479999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Login" cornerStyle="capsule"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jMP-gV-PhT">
-                                                <rect key="frame" x="0.0" y="209.66666666666669" width="333" height="62"/>
+                                                <rect key="frame" x="0.0" y="201" width="333" height="59"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Forgot Password?">
                                                     <color key="baseForegroundColor" red="0.42979676570000003" green="0.35189029719999998" blue="0.93225524479999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w4t-ie-lZ7">
-                                                <rect key="frame" x="0.0" y="279.66666666666669" width="333" height="62"/>
+                                                <rect key="frame" x="0.0" y="268" width="333" height="59"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Don't have an account? Sign Up">
                                                     <color key="baseForegroundColor" red="0.42979676570000003" green="0.35189029719999998" blue="0.93225524479999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -79,8 +79,10 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="lNu-S6-8we" firstAttribute="height" secondItem="5Gd-iM-OkX" secondAttribute="height" multiplier="0.4" id="mb7-yg-H2t"/>
+                                    <constraint firstItem="lNu-S6-8we" firstAttribute="width" secondItem="5Gd-iM-OkX" secondAttribute="width" multiplier="0.5" priority="750" id="hjZ-x9-zqF"/>
+                                    <constraint firstItem="lNu-S6-8we" firstAttribute="height" secondItem="5Gd-iM-OkX" secondAttribute="height" multiplier="0.4" priority="750" id="mb7-yg-H2t"/>
                                 </constraints>
+                                <variation key="heightClass=compact" axis="horizontal"/>
                             </stackView>
                             <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X31-0p-DEy" customClass="LottieAnimationView" customModule="Lottie">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
