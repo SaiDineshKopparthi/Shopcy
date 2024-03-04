@@ -1,0 +1,12 @@
+{
+  "data" : [
+    {
+      "filename" : "Shopcy_Launch.json",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B557C4E2B964DD100AD03FB /* AuthenticationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B557C4D2B964DD100AD03FB /* AuthenticationModel.swift */; };
+		1B701DE02B963CE700911EA1 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 1B701DDF2B963CE700911EA1 /* Lottie */; };
 		1B9BE6722B716C4100EA92A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9BE6712B716C4100EA92A5 /* AppDelegate.swift */; };
 		1B9BE6742B716C4100EA92A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9BE6732B716C4100EA92A5 /* SceneDelegate.swift */; };
 		1B9BE6762B716C4100EA92A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9BE6752B716C4100EA92A5 /* ViewController.swift */; };
 		1B9BE6792B716C4100EA92A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B9BE6772B716C4100EA92A5 /* Main.storyboard */; };
 		1B9BE67B2B716C4800EA92A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B9BE67A2B716C4800EA92A5 /* Assets.xcassets */; };
 		1B9BE67E2B716C4800EA92A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B9BE67C2B716C4800EA92A5 /* LaunchScreen.storyboard */; };
+		1BA3802B2B7E73C900F89CD0 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA3802A2B7E73C900F89CD0 /* LoginVC.swift */; };
 		1BAE3A762B71849F005C9716 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAE3A752B71849F005C9716 /* Model.swift */; };
 		1BAE3A792B7184C0005C9716 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1BAE3A782B7184C0005C9716 /* Alamofire */; };
 		1BE5F2642B741C5E00D6019A /* ProductView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BE5F2632B741C5E00D6019A /* ProductView.xib */; };
@@ -20,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B557C4D2B964DD100AD03FB /* AuthenticationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationModel.swift; sourceTree = "<group>"; };
 		1B9BE66E2B716C4100EA92A5 /* Shopcy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shopcy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B9BE6712B716C4100EA92A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B9BE6732B716C4100EA92A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +32,7 @@
 		1B9BE67A2B716C4800EA92A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B9BE67D2B716C4800EA92A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B9BE67F2B716C4800EA92A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BA3802A2B7E73C900F89CD0 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		1BAE3A752B71849F005C9716 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		1BE5F2632B741C5E00D6019A /* ProductView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductView.xib; sourceTree = "<group>"; };
 		1BE5F2672B74206900D6019A /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
@@ -39,6 +44,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BAE3A792B7184C0005C9716 /* Alamofire in Frameworks */,
+				1B701DE02B963CE700911EA1 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,8 +73,9 @@
 				1B9BE6852B71726200EA92A5 /* Supporting Files */,
 				1BE5F2692B7429ED00D6019A /* Custom View */,
 				1BAE3A752B71849F005C9716 /* Model.swift */,
-				1B9BE6752B716C4100EA92A5 /* ViewController.swift */,
+				1BA3802C2B7E73D400F89CD0 /* View Controllers */,
 				1B9BE6772B716C4100EA92A5 /* Main.storyboard */,
+				1B557C4D2B964DD100AD03FB /* AuthenticationModel.swift */,
 				1B9BE67A2B716C4800EA92A5 /* Assets.xcassets */,
 				1B9BE67C2B716C4800EA92A5 /* LaunchScreen.storyboard */,
 				1B9BE67F2B716C4800EA92A5 /* Info.plist */,
@@ -83,6 +90,15 @@
 				1B9BE6732B716C4100EA92A5 /* SceneDelegate.swift */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1BA3802C2B7E73D400F89CD0 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1B9BE6752B716C4100EA92A5 /* ViewController.swift */,
+				1BA3802A2B7E73C900F89CD0 /* LoginVC.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 		1BE5F2692B7429ED00D6019A /* Custom View */ = {
@@ -112,6 +128,7 @@
 			name = Shopcy;
 			packageProductDependencies = (
 				1BAE3A782B7184C0005C9716 /* Alamofire */,
+				1B701DDF2B963CE700911EA1 /* Lottie */,
 			);
 			productName = Shopcy;
 			productReference = 1B9BE66E2B716C4100EA92A5 /* Shopcy.app */;
@@ -143,6 +160,7 @@
 			mainGroup = 1B9BE6652B716C4100EA92A5;
 			packageReferences = (
 				1BAE3A772B7184C0005C9716 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				1B701DDE2B963CE700911EA1 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 1B9BE66F2B716C4100EA92A5 /* Products */;
 			projectDirPath = "";
@@ -174,8 +192,10 @@
 			files = (
 				1B9BE6762B716C4100EA92A5 /* ViewController.swift in Sources */,
 				1B9BE6722B716C4100EA92A5 /* AppDelegate.swift in Sources */,
+				1BA3802B2B7E73C900F89CD0 /* LoginVC.swift in Sources */,
 				1BE5F2682B74206900D6019A /* ProductView.swift in Sources */,
 				1B9BE6742B716C4100EA92A5 /* SceneDelegate.swift in Sources */,
+				1B557C4E2B964DD100AD03FB /* AuthenticationModel.swift in Sources */,
 				1BAE3A762B71849F005C9716 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,6 +421,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		1B701DDE2B963CE700911EA1 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.4.1;
+			};
+		};
 		1BAE3A772B7184C0005C9716 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -412,6 +440,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1B701DDF2B963CE700911EA1 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B701DDE2B963CE700911EA1 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
 		1BAE3A782B7184C0005C9716 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1BAE3A772B7184C0005C9716 /* XCRemoteSwiftPackageReference "Alamofire" */;

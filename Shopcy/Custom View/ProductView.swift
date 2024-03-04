@@ -31,6 +31,9 @@ class ProductView: UIView {
         guard let viewOfXib = Bundle.main.loadNibNamed("ProductView", owner: self)![0] as? UIView else {return}
         
         viewOfXib.frame = self.bounds
+        viewOfXib.layer.cornerRadius = 5
+        viewOfXib.layer.borderWidth = 2
+        self.productIMG.layer.borderWidth = 2
         self.addSubview(viewOfXib)
     }
 

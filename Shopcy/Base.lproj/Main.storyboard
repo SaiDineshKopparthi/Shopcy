@@ -1,51 +1,226 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5XE-xg-1De">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="y9I-Lf-bCg">
+            <objects>
+                <navigationController id="5XE-xg-1De" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="oAK-1a-twS">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ve5-nh-H1q" kind="relationship" relationship="rootViewController" id="5DA-z2-syB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hGQ-s7-Wz2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1581" y="-376"/>
+        </scene>
+        <!--Shopcy-->
+        <scene sceneID="EDu-p0-O97">
+            <objects>
+                <viewController id="ve5-nh-H1q" customClass="LoginVC" customModule="Shopcy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fnb-nP-8L1">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5Gd-iM-OkX" userLabel="BigContainerSV">
+                                <rect key="frame" x="30" y="205" width="333" height="583"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lNu-S6-8we" customClass="LottieAnimationView" customModule="Lottie">
+                                        <rect key="frame" x="0.0" y="0.0" width="333" height="233.33333333333334"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="O6X-yJ-HLC" userLabel="Actions SV">
+                                        <rect key="frame" x="0.0" y="241.33333333333329" width="333" height="341.66666666666674"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eqn-Qa-r4x">
+                                                <rect key="frame" x="0.0" y="0.0" width="333" height="61.666666666666664"/>
+                                                <color key="backgroundColor" red="0.80504261359999996" green="0.80711866259999998" blue="0.93225524479999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GSk-JY-Zfu">
+                                                <rect key="frame" x="0.0" y="69.666666666666686" width="333" height="62"/>
+                                                <color key="backgroundColor" red="0.80504261363636365" green="0.80711866258741261" blue="0.93225524475524479" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LS2-KX-aO6">
+                                                <rect key="frame" x="0.0" y="139.66666666666669" width="333" height="62"/>
+                                                <color key="tintColor" red="0.42979676569790204" green="0.35189029724265736" blue="0.93225524479999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Login" cornerStyle="capsule"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jMP-gV-PhT">
+                                                <rect key="frame" x="0.0" y="209.66666666666669" width="333" height="62"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Forgot Password?">
+                                                    <color key="baseForegroundColor" red="0.42979676570000003" green="0.35189029719999998" blue="0.93225524479999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w4t-ie-lZ7">
+                                                <rect key="frame" x="0.0" y="279.66666666666669" width="333" height="62"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Don't have an account? Sign Up">
+                                                    <color key="baseForegroundColor" red="0.42979676570000003" green="0.35189029719999998" blue="0.93225524479999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="lNu-S6-8we" firstAttribute="height" secondItem="5Gd-iM-OkX" secondAttribute="height" multiplier="0.4" id="mb7-yg-H2t"/>
+                                </constraints>
+                            </stackView>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X31-0p-DEy" customClass="LottieAnimationView" customModule="Lottie">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MJh-9p-GBO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="X31-0p-DEy" firstAttribute="leading" secondItem="Fnb-nP-8L1" secondAttribute="leading" id="2tT-eb-G5a"/>
+                            <constraint firstItem="MJh-9p-GBO" firstAttribute="trailing" secondItem="5Gd-iM-OkX" secondAttribute="trailing" constant="30" id="406-F8-bMk"/>
+                            <constraint firstItem="X31-0p-DEy" firstAttribute="top" secondItem="Fnb-nP-8L1" secondAttribute="top" id="87j-rU-drT"/>
+                            <constraint firstItem="MJh-9p-GBO" firstAttribute="bottom" secondItem="5Gd-iM-OkX" secondAttribute="bottom" constant="30" id="CzL-PX-Eyr"/>
+                            <constraint firstAttribute="trailing" secondItem="X31-0p-DEy" secondAttribute="trailing" id="NpC-7d-Xeh"/>
+                            <constraint firstAttribute="bottom" secondItem="X31-0p-DEy" secondAttribute="bottom" id="Qh8-wH-ahD"/>
+                            <constraint firstItem="5Gd-iM-OkX" firstAttribute="top" secondItem="MJh-9p-GBO" secondAttribute="top" constant="50" id="XrR-Yi-91M"/>
+                            <constraint firstItem="5Gd-iM-OkX" firstAttribute="leading" secondItem="MJh-9p-GBO" secondAttribute="leading" constant="30" id="u0Q-mH-SQs"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Shopcy" id="NQR-dF-0s0"/>
+                    <connections>
+                        <outlet property="launchLAV" destination="X31-0p-DEy" id="3v0-pJ-XOs"/>
+                        <outlet property="loginLAV" destination="lNu-S6-8we" id="2ed-uS-7fm"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="loginToProducts" id="k7z-L6-Yes"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CWO-Cc-YG8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-593" y="-376"/>
+        </scene>
+        <!--Products-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Shopcy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kvp-7Y-TT3">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G8J-G9-BTe">
+                                <rect key="frame" x="0.0" y="155" width="393" height="1011"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ys5-Vy-QFf">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1540.6666666666667"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Zy-iY-UmE">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1200"/>
+                                        <subviews>
+                                            <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lip-F5-yAB" userLabel="ProductsSV">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="1200"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="3hV-rl-cxK" userLabel="Row 1">
+                                                        <rect key="frame" x="0.0" y="0.0" width="393" height="294"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PrW-MT-4Oz" customClass="ProductView" customModule="Shopcy" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="192.66666666666666" height="294"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pYD-KE-baX" customClass="ProductView" customModule="Shopcy" customModuleProvider="target">
+                                                                <rect key="frame" x="200.66666666666663" y="0.0" width="192.33333333333337" height="294"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            </view>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hOD-KK-VLw" userLabel="Row 2">
+                                                        <rect key="frame" x="0.0" y="302" width="393" height="294"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="65i-s7-gCY" customClass="ProductView" customModule="Shopcy" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="192.66666666666666" height="294"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VdO-D6-i48" customClass="ProductView" customModule="Shopcy" customModuleProvider="target">
+                                                                <rect key="frame" x="200.66666666666663" y="0.0" width="192.33333333333337" height="294"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            </view>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Kce-Ik-3tC" userLabel="Row 3">
+                                                        <rect key="frame" x="0.0" y="604" width="393" height="294"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ypQ-w2-Dpw" customClass="ProductView" customModule="Shopcy" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="192.66666666666666" height="294"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Myg-l2-ikY" customClass="ProductView" customModule="Shopcy" customModuleProvider="target">
+                                                                <rect key="frame" x="200.66666666666663" y="0.0" width="192.33333333333337" height="294"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            </view>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="4VV-3Q-rAm" userLabel="Row 4">
+                                                        <rect key="frame" x="0.0" y="906" width="393" height="294"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EUD-6E-q2o" customClass="ProductView" customModule="Shopcy" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="192.66666666666666" height="294"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o2e-rX-tDZ" customClass="ProductView" customModule="Shopcy" customModuleProvider="target">
+                                                                <rect key="frame" x="200.66666666666663" y="0.0" width="192.33333333333337" height="294"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            </view>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1200" id="azK-h6-Pfl"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="lip-F5-yAB" secondAttribute="bottom" id="GKI-V3-6i4"/>
+                                            <constraint firstAttribute="trailing" secondItem="lip-F5-yAB" secondAttribute="trailing" id="aCc-jk-olu"/>
+                                            <constraint firstItem="lip-F5-yAB" firstAttribute="top" secondItem="4Zy-iY-UmE" secondAttribute="top" id="lJF-mK-V2z"/>
+                                            <constraint firstItem="lip-F5-yAB" firstAttribute="leading" secondItem="4Zy-iY-UmE" secondAttribute="leading" id="uCL-HT-gmk"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="ys5-Vy-QFf" secondAttribute="trailing" id="8L0-by-qa5"/>
-                                    <constraint firstItem="ys5-Vy-QFf" firstAttribute="leading" secondItem="Kvp-7Y-TT3" secondAttribute="leading" id="9Rv-7p-gYG"/>
-                                    <constraint firstItem="ys5-Vy-QFf" firstAttribute="width" secondItem="Kvp-7Y-TT3" secondAttribute="width" id="Tzq-tf-MRe"/>
-                                    <constraint firstItem="ys5-Vy-QFf" firstAttribute="top" secondItem="Kvp-7Y-TT3" secondAttribute="top" id="dMc-G7-dNF"/>
-                                    <constraint firstAttribute="bottom" secondItem="ys5-Vy-QFf" secondAttribute="bottom" id="jHS-Ff-8rw"/>
+                                    <constraint firstAttribute="bottom" secondItem="4Zy-iY-UmE" secondAttribute="bottom" id="BDm-cP-8aX"/>
+                                    <constraint firstAttribute="trailing" secondItem="4Zy-iY-UmE" secondAttribute="trailing" id="MOw-AD-bOD"/>
+                                    <constraint firstItem="4Zy-iY-UmE" firstAttribute="top" secondItem="G8J-G9-BTe" secondAttribute="top" id="TgD-ue-qHS"/>
+                                    <constraint firstItem="4Zy-iY-UmE" firstAttribute="leading" secondItem="G8J-G9-BTe" secondAttribute="leading" id="ZY4-pW-PUA"/>
                                 </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="sGf-ZP-GPn"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="0Kw-6m-G9o"/>
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Kvp-7Y-TT3" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="6Hs-Ov-Zew"/>
-                            <constraint firstItem="Kvp-7Y-TT3" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="AhL-P0-hIs"/>
-                            <constraint firstItem="Kvp-7Y-TT3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="EuW-oN-uaW"/>
-                            <constraint firstItem="Kvp-7Y-TT3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kQc-qM-B7B"/>
+                            <constraint firstItem="4Zy-iY-UmE" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="EDm-Fh-IJB"/>
+                            <constraint firstItem="G8J-G9-BTe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GVO-D4-ZXP"/>
+                            <constraint firstItem="G8J-G9-BTe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="TOr-Ea-S2a"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="G8J-G9-BTe" secondAttribute="trailing" id="hYe-to-A2C"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="G8J-G9-BTe" secondAttribute="bottom" id="jDZ-g5-k2L"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Products" id="UxM-lJ-adL"/>
+                    <size key="freeformSize" width="393" height="1200"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="45.038167938931295" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="567" y="-376"/>
         </scene>
     </scenes>
     <resources>
