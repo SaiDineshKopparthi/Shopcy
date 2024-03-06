@@ -64,11 +64,20 @@ class LoginVC: UIViewController {
         }
         
         self.messageLBL.text = ""
-        self.performSegue(withIdentifier: "loginToProducts", sender: sender)
+        Task{
+            do{
+                let user = try await AuthenticationManager.shared.signIn(email: username, password: password)
+                self.performSegue(withIdentifier: "loginToProducts", sender: self)
+            }
+            catch {
+                print(error)
+                self.messageLBL.text = "Invalid Login Credentials! Please try again."
+                
+            }
+            
+        }
         
     }
-    
-    
     //MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     }

@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Create AccountVC-->
         <scene sceneID="O2Y-rx-ZKp">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="wE4-BW-4P5" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="wE4-BW-4P5" customClass="CreateAccountVC" customModule="Shopcy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SNR-fl-EXb">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -46,6 +46,9 @@
                                                         <color key="backgroundColor" red="0.80504261359999996" green="0.80711866259999998" blue="0.93225524479999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="exitTextFieldOnReturn:" destination="wE4-BW-4P5" eventType="editingDidEndOnExit" id="dZb-sO-fNx"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -63,6 +66,10 @@
                                                         <color key="backgroundColor" red="0.80504261359999996" green="0.80711866259999998" blue="0.93225524479999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="exitTextFieldOnReturn:" destination="wE4-BW-4P5" eventType="editingDidEnd" id="Oow-rq-VKN"/>
+                                                            <action selector="passwordCheck:" destination="wE4-BW-4P5" eventType="editingChanged" id="dB0-94-a6C"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -80,6 +87,10 @@
                                                         <color key="backgroundColor" red="0.80504261359999996" green="0.80711866259999998" blue="0.93225524479999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="exitTextFieldOnReturn:" destination="wE4-BW-4P5" eventType="editingDidEnd" id="Yk9-6A-lf5"/>
+                                                            <action selector="rePasswordCheck:" destination="wE4-BW-4P5" eventType="editingChanged" id="7z4-hK-gvZ"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -103,6 +114,9 @@
                                                                 <color key="backgroundColor" red="0.42979676570000003" green="0.35189029719999998" blue="0.93225524479999999" alpha="1" colorSpace="calibratedRGB"/>
                                                             </backgroundConfiguration>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="createUser:" destination="wE4-BW-4P5" eventType="touchUpInside" id="f1c-cc-CgB"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zSf-UR-hHy">
                                                         <rect key="frame" x="170.66666666666663" y="0.0" width="162.33333333333337" height="71.333333333333329"/>
@@ -116,7 +130,7 @@
                                                             </backgroundConfiguration>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <segue destination="ve5-nh-H1q" kind="show" id="9m1-wq-J7X"/>
+                                                            <action selector="cancelAccountCreation:" destination="wE4-BW-4P5" eventType="touchUpInside" id="Wi8-9y-WDv"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -142,10 +156,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="as0-u3-s5h"/>
+                    <connections>
+                        <outlet property="checkPasswordTF" destination="VVw-hB-pgn" id="FcE-Oo-cTh"/>
+                        <outlet property="emailTF" destination="v1U-vI-NkW" id="bUr-35-58U"/>
+                        <outlet property="messageLBL" destination="LLU-9p-Akr" id="5zY-DY-Vo8"/>
+                        <outlet property="passwordTF" destination="Ejy-aa-n7n" id="KrX-N1-sg2"/>
+                        <outlet property="registerBTN" destination="ME2-wk-5uI" id="XZE-HF-Wsy"/>
+                        <segue destination="ve5-nh-H1q" kind="show" identifier="createAccountToLogin" id="x1i-0H-vAm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AvC-3n-I0u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-593" y="-1168"/>
+            <point key="canvasLocation" x="-593" y="-1368"/>
         </scene>
         <!--Shopcy-->
         <scene sceneID="EDu-p0-O97">
@@ -266,10 +288,10 @@
             </objects>
             <point key="canvasLocation" x="-593" y="-376"/>
         </scene>
-        <!--View Controller-->
+        <!--Reset PasswordVC-->
         <scene sceneID="iax-lV-B2r">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="LHG-Um-Spv" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="LHG-Um-Spv" customClass="ResetPasswordVC" customModule="Shopcy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="deL-zA-kix">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -309,6 +331,9 @@
                                                         <color key="backgroundColor" red="0.80504261359999996" green="0.80711866259999998" blue="0.93225524479999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="exitTextFieldOnReturn:" destination="LHG-Um-Spv" eventType="editingDidEndOnExit" id="ru7-wg-jgG"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -333,6 +358,9 @@
                                                                 <color key="backgroundColor" red="0.42979676570000003" green="0.35189029719999998" blue="0.93225524479999999" alpha="1" colorSpace="calibratedRGB"/>
                                                             </backgroundConfiguration>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="sendLinkBTN:" destination="LHG-Um-Spv" eventType="touchUpInside" id="kb1-EK-yw7"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kDH-hR-9iy">
                                                         <rect key="frame" x="0.0" y="52" width="353" height="44"/>
@@ -346,7 +374,7 @@
                                                             </backgroundConfiguration>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <segue destination="ve5-nh-H1q" kind="show" id="Ofj-hf-E62"/>
+                                                            <action selector="cancelPasswordReset:" destination="LHG-Um-Spv" eventType="touchUpInside" id="r0R-DA-IUU"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -376,6 +404,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="L9P-Ma-Ubc"/>
+                    <connections>
+                        <outlet property="emailTF" destination="rA8-aV-sha" id="LSO-1e-mCb"/>
+                        <outlet property="messageLBL" destination="BPm-9z-zEN" id="0C9-87-Pkn"/>
+                        <segue destination="ve5-nh-H1q" kind="show" identifier="resetPasswordToLogin" id="yRL-eb-Aua"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zr7-cz-QVn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -402,7 +435,7 @@
         <!--Products-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="Shopcy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="1180"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -512,7 +545,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Ofj-hf-E62"/>
+        <segue reference="x1i-0H-vAm"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Shopcy" width="148" height="37"/>

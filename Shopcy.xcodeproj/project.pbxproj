@@ -37,9 +37,10 @@
 		1B81D92D2B97FBFE00D35F00 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1B81D92C2B97FBFE00D35F00 /* FirebaseRemoteConfigSwift */; };
 		1B81D92F2B97FBFE00D35F00 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 1B81D92E2B97FBFE00D35F00 /* FirebaseStorage */; };
 		1B81D9312B97FBFE00D35F00 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 1B81D9302B97FBFE00D35F00 /* FirebaseStorageCombine-Community */; };
+		1B81D9332B98042000D35F00 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B81D9322B98042000D35F00 /* CreateAccountVC.swift */; };
+		1B81D9352B980B9D00D35F00 /* ResetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B81D9342B980B9D00D35F00 /* ResetPasswordVC.swift */; };
 		1B9BE6722B716C4100EA92A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9BE6712B716C4100EA92A5 /* AppDelegate.swift */; };
 		1B9BE6742B716C4100EA92A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9BE6732B716C4100EA92A5 /* SceneDelegate.swift */; };
-		1B9BE6762B716C4100EA92A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9BE6752B716C4100EA92A5 /* ViewController.swift */; };
 		1B9BE6792B716C4100EA92A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B9BE6772B716C4100EA92A5 /* Main.storyboard */; };
 		1B9BE67B2B716C4800EA92A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B9BE67A2B716C4800EA92A5 /* Assets.xcassets */; };
 		1B9BE67E2B716C4800EA92A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B9BE67C2B716C4800EA92A5 /* LaunchScreen.storyboard */; };
@@ -52,11 +53,12 @@
 
 /* Begin PBXFileReference section */
 		1B557C4D2B964DD100AD03FB /* AuthenticationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationModel.swift; sourceTree = "<group>"; };
+		1B6A7D112B982AFE003F44BD /* Shopcy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shopcy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B71F1962B9651DB0046DCB2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		1B9BE66E2B716C4100EA92A5 /* Shopcy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Shopcy.app; path = "/Users/dinesh/Documents/Shopcy/build/Debug-iphoneos/Shopcy.app"; sourceTree = "<absolute>"; };
+		1B81D9322B98042000D35F00 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
+		1B81D9342B980B9D00D35F00 /* ResetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordVC.swift; sourceTree = "<group>"; };
 		1B9BE6712B716C4100EA92A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B9BE6732B716C4100EA92A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1B9BE6752B716C4100EA92A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1B9BE6782B716C4100EA92A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1B9BE67A2B716C4800EA92A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B9BE67D2B716C4800EA92A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				1B9BE6702B716C4100EA92A5 /* Shopcy */,
+				1B6A7D112B982AFE003F44BD /* Shopcy.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -159,8 +162,9 @@
 		1BA3802C2B7E73D400F89CD0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1B9BE6752B716C4100EA92A5 /* ViewController.swift */,
 				1BA3802A2B7E73C900F89CD0 /* LoginVC.swift */,
+				1B81D9322B98042000D35F00 /* CreateAccountVC.swift */,
+				1B81D9342B980B9D00D35F00 /* ResetPasswordVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -222,7 +226,7 @@
 				1B81D9302B97FBFE00D35F00 /* FirebaseStorageCombine-Community */,
 			);
 			productName = Shopcy;
-			productReference = 1B9BE66E2B716C4100EA92A5 /* Shopcy.app */;
+			productReference = 1B6A7D112B982AFE003F44BD /* Shopcy.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -283,10 +287,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B9BE6762B716C4100EA92A5 /* ViewController.swift in Sources */,
 				1B9BE6722B716C4100EA92A5 /* AppDelegate.swift in Sources */,
+				1B81D9332B98042000D35F00 /* CreateAccountVC.swift in Sources */,
 				1BA3802B2B7E73C900F89CD0 /* LoginVC.swift in Sources */,
 				1BE5F2682B74206900D6019A /* ProductView.swift in Sources */,
+				1B81D9352B980B9D00D35F00 /* ResetPasswordVC.swift in Sources */,
 				1B9BE6742B716C4100EA92A5 /* SceneDelegate.swift in Sources */,
 				1B557C4E2B964DD100AD03FB /* AuthenticationModel.swift in Sources */,
 				1BAE3A762B71849F005C9716 /* Model.swift in Sources */,
