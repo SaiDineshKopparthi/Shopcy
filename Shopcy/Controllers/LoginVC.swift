@@ -49,12 +49,9 @@ class LoginVC: UIViewController {
         super.viewDidLoad()
     }
     
-    
-    
-    @IBAction func exitUsernameTF(_ sender: UITextField) {
+    @IBAction func exitTextFieldOnReturn(_ sender: UITextField) {
     }
-    @IBAction func exitPasswordTF(_ sender: UITextField) {
-    }
+    
     
     @IBAction func onLogin(_ sender: UIButton) {
         guard let username = self.usernameTF.text, !username.isEmpty else {

@@ -92,16 +92,29 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ziS-lb-U6L">
                                                 <rect key="frame" x="0.0" y="395.99999999999994" width="333" height="71.333333333333314"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ME2-wk-5uI">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ME2-wk-5uI">
                                                         <rect key="frame" x="0.0" y="0.0" width="162.66666666666666" height="71.333333333333329"/>
-                                                        <color key="tintColor" red="0.42979676570000003" green="0.35189029719999998" blue="0.93225524479999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled" title="Register" cornerStyle="capsule"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Register"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Register" cornerStyle="capsule">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" red="0.42979676570000003" green="0.35189029719999998" blue="0.93225524479999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </backgroundConfiguration>
+                                                        </buttonConfiguration>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zSf-UR-hHy">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zSf-UR-hHy">
                                                         <rect key="frame" x="170.66666666666663" y="0.0" width="162.33333333333337" height="71.333333333333329"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled" title="Cancel" cornerStyle="capsule"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Cancel"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Cancel" cornerStyle="capsule">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" red="0.42979676570000003" green="0.35189029719999998" blue="0.93225524479999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </backgroundConfiguration>
+                                                        </buttonConfiguration>
                                                         <connections>
                                                             <segue destination="ve5-nh-H1q" kind="show" id="9m1-wq-J7X"/>
                                                         </connections>
@@ -164,7 +177,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
-                                                    <action selector="exitUsernameTF:" destination="ve5-nh-H1q" eventType="editingDidEndOnExit" id="Fl4-2R-0vV"/>
+                                                    <action selector="exitTextFieldOnReturn:" destination="ve5-nh-H1q" eventType="editingDidEndOnExit" id="80T-7v-Oh7"/>
                                                 </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GSk-JY-Zfu">
@@ -173,14 +186,20 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
-                                                    <action selector="exitPasswordTF:" destination="ve5-nh-H1q" eventType="editingDidEndOnExit" id="JDu-GZ-eyT"/>
+                                                    <action selector="exitTextFieldOnReturn:" destination="ve5-nh-H1q" eventType="editingDidEnd" id="mZM-vX-dqm"/>
                                                 </connections>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LS2-KX-aO6">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LS2-KX-aO6">
                                                 <rect key="frame" x="0.0" y="231.66666666666671" width="333" height="69.333333333333343"/>
-                                                <color key="tintColor" red="0.42979676569790204" green="0.35189029724265736" blue="0.93225524479999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Login" cornerStyle="capsule"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Login"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Login" cornerStyle="capsule">
+                                                    <backgroundConfiguration key="background">
+                                                        <color key="backgroundColor" red="0.42979676570000003" green="0.35189029719999998" blue="0.93225524479999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </backgroundConfiguration>
+                                                </buttonConfiguration>
                                                 <connections>
                                                     <action selector="onLogin:" destination="ve5-nh-H1q" eventType="touchUpInside" id="SkU-ep-iv7"/>
                                                 </connections>
@@ -240,7 +259,7 @@
                         <outlet property="messageLBL" destination="fps-jp-smB" id="BYD-2j-gEx"/>
                         <outlet property="passwordTF" destination="GSk-JY-Zfu" id="wHY-Wg-DBq"/>
                         <outlet property="usernameTF" destination="eqn-Qa-r4x" id="siC-2b-bmJ"/>
-                        <segue destination="Yyd-1I-la3" kind="show" identifier="loginToProducts" id="iqm-DP-wfX"/>
+                        <segue destination="Yfb-hd-mM4" kind="show" identifier="loginToProducts" id="8W0-W4-6aY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CWO-Cc-YG8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -303,17 +322,29 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="JNW-M1-g7b" userLabel="ButtonsSV">
                                                 <rect key="frame" x="0.0" y="383.33333333333331" width="353" height="96"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uUC-0u-HHu">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uUC-0u-HHu">
                                                         <rect key="frame" x="0.0" y="0.0" width="353" height="44"/>
-                                                        <color key="tintColor" red="0.42979676570000003" green="0.35189029719999998" blue="0.93225524479999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled" title="Send Link" cornerStyle="capsule"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Send Link"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Send Link" cornerStyle="capsule">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" red="0.42979676570000003" green="0.35189029719999998" blue="0.93225524479999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </backgroundConfiguration>
+                                                        </buttonConfiguration>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kDH-hR-9iy">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kDH-hR-9iy">
                                                         <rect key="frame" x="0.0" y="52" width="353" height="44"/>
-                                                        <color key="tintColor" red="0.42979676570000003" green="0.35189029719999998" blue="0.93225524479999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled" title="Cancel" cornerStyle="capsule"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Cancel"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Cancel" cornerStyle="capsule">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" red="0.42979676570000003" green="0.35189029719999998" blue="0.93225524479999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </backgroundConfiguration>
+                                                        </buttonConfiguration>
                                                         <connections>
                                                             <segue destination="ve5-nh-H1q" kind="show" id="Ofj-hf-E62"/>
                                                         </connections>
@@ -332,7 +363,7 @@
                                     <constraint firstItem="Li9-Hc-qeT" firstAttribute="height" secondItem="agW-cV-QCH" secondAttribute="height" multiplier="0.4" priority="750" id="Nbw-8r-xCF"/>
                                     <constraint firstItem="Li9-Hc-qeT" firstAttribute="width" secondItem="agW-cV-QCH" secondAttribute="width" multiplier="0.5" priority="750" id="lO3-pc-Wke"/>
                                 </constraints>
-                                <variation key="heightClass=compact" axis="vertical"/>
+                                <variation key="heightClass=compact" axis="horizontal"/>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="j3E-pK-2Kh"/>
@@ -350,41 +381,23 @@
             </objects>
             <point key="canvasLocation" x="-593.12977099236639" y="373.94366197183098"/>
         </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="i5b-14-aDs">
-            <objects>
-                <tabBarController modalPresentationStyle="fullScreen" id="Yyd-1I-la3" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="GQX-1X-lXv"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="N9a-0F-hZR">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="Yfb-hd-mM4" kind="relationship" relationship="viewControllers" id="Fta-go-eIA"/>
-                        <segue destination="keS-Tl-zwb" kind="relationship" relationship="viewControllers" id="gF5-wN-Aif"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Qnn-oH-ASp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="366" y="-376"/>
-        </scene>
         <!--Products-->
         <scene sceneID="YPt-y4-O3i">
             <objects>
                 <navigationController modalPresentationStyle="fullScreen" id="Yfb-hd-mM4" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Products" image="shippingbox" catalog="system" id="6h4-rM-z30"/>
+                    <navigationItem key="navigationItem" id="ctQ-8p-wja"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="hmh-4r-ase">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="108"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="wwI-tq-WDc"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="cbl-PZ-E8Q"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yFG-ZZ-TQ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1415" y="-799"/>
+            <point key="canvasLocation" x="448" y="-376"/>
         </scene>
         <!--Products-->
         <scene sceneID="tne-QT-ifu">
@@ -395,7 +408,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G8J-G9-BTe">
-                                <rect key="frame" x="0.0" y="108" width="393" height="1033"/>
+                                <rect key="frame" x="0.0" y="108" width="393" height="1072"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Zy-iY-UmE">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="1200"/>
@@ -495,24 +508,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2497" y="-799"/>
-        </scene>
-        <!--Profile-->
-        <scene sceneID="HY4-ov-pmD">
-            <objects>
-                <viewController modalPresentationStyle="fullScreen" id="keS-Tl-zwb" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Xh0-bh-1Er">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="oRp-r4-eaI"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="Sft-TQ-Zur"/>
-                    <navigationItem key="navigationItem" id="KCQ-yh-Cri"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fYF-FF-B0i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1415" y="130"/>
+            <point key="canvasLocation" x="1465" y="-376"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
@@ -520,7 +516,6 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Shopcy" width="148" height="37"/>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="shippingbox" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

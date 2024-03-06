@@ -54,7 +54,6 @@ final class AuthenticationManager {
     }
     
     func deleteUser(){
-        
         let user = Auth.auth().currentUser
         
         user?.delete { error in
