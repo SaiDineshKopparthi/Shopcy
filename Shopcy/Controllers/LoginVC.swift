@@ -10,6 +10,7 @@ import Lottie
 
 class LoginVC: UIViewController {
     
+    //Lottie Animation Views
     @IBOutlet weak var loginLAV: LottieAnimationView!{
         didSet{
             loginLAV.animation = LottieAnimation.named("Shopcy_Login")
@@ -17,7 +18,6 @@ class LoginVC: UIViewController {
             loginLAV.play()
         }
     }
-    
     @IBOutlet weak var launchLAV: LottieAnimationView!{
         didSet{
             launchLAV.animation = LottieAnimation.named("Shopcy_Launch")
@@ -35,8 +35,40 @@ class LoginVC: UIViewController {
         }
     }
     
+    //Labels
+    @IBOutlet weak var messageLBL: UILabel!
+    
+    //Text Fields
+    @IBOutlet weak var usernameTF: UITextField!
+    @IBOutlet weak var passwordTF: UITextField!
+    
+    //Buttons
+    @IBOutlet weak var loginBTN: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    
+    
+    @IBAction func exitUsernameTF(_ sender: UITextField) {
+    }
+    @IBAction func exitPasswordTF(_ sender: UITextField) {
+    }
+    
+    @IBAction func onLogin(_ sender: UIButton) {
+        guard let username = self.usernameTF.text, !username.isEmpty else {
+            self.messageLBL.text = "Please enter Username!"
+            return
+        }
+        guard let password = self.passwordTF.text, !password.isEmpty else{
+            self.messageLBL.text = "Please enter Password!"
+            return
+        }
+        
+        self.messageLBL.text = ""
+        self.performSegue(withIdentifier: "loginToProducts", sender: sender)
+        
     }
     
     
