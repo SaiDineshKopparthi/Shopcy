@@ -47,6 +47,8 @@
 		1BA3802B2B7E73C900F89CD0 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA3802A2B7E73C900F89CD0 /* LoginVC.swift */; };
 		1BAE3A762B71849F005C9716 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAE3A752B71849F005C9716 /* Model.swift */; };
 		1BAE3A792B7184C0005C9716 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1BAE3A782B7184C0005C9716 /* Alamofire */; };
+		1BDE605B2B98E91400020678 /* ProductsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDE605A2B98E91400020678 /* ProductsVC.swift */; };
+		1BDE605E2B991F6C00020678 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 1BDE605D2B991F6C00020678 /* SDWebImageSwiftUI */; };
 		1BE5F2642B741C5E00D6019A /* ProductView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BE5F2632B741C5E00D6019A /* ProductView.xib */; };
 		1BE5F2682B74206900D6019A /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE5F2672B74206900D6019A /* ProductView.swift */; };
 /* End PBXBuildFile section */
@@ -65,6 +67,7 @@
 		1B9BE67F2B716C4800EA92A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BA3802A2B7E73C900F89CD0 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		1BAE3A752B71849F005C9716 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		1BDE605A2B98E91400020678 /* ProductsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsVC.swift; sourceTree = "<group>"; };
 		1BE5F2632B741C5E00D6019A /* ProductView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductView.xib; sourceTree = "<group>"; };
 		1BE5F2672B74206900D6019A /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BDE605E2B991F6C00020678 /* SDWebImageSwiftUI in Frameworks */,
 				1B81D9272B97FBFE00D35F00 /* FirebaseMessaging in Frameworks */,
 				1BAE3A792B7184C0005C9716 /* Alamofire in Frameworks */,
 				1B81D9192B97FBFE00D35F00 /* FirebaseFirestoreSwift in Frameworks */,
@@ -163,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				1BA3802A2B7E73C900F89CD0 /* LoginVC.swift */,
+				1BDE605A2B98E91400020678 /* ProductsVC.swift */,
 				1B81D9322B98042000D35F00 /* CreateAccountVC.swift */,
 				1B81D9342B980B9D00D35F00 /* ResetPasswordVC.swift */,
 			);
@@ -224,6 +229,7 @@
 				1B81D92C2B97FBFE00D35F00 /* FirebaseRemoteConfigSwift */,
 				1B81D92E2B97FBFE00D35F00 /* FirebaseStorage */,
 				1B81D9302B97FBFE00D35F00 /* FirebaseStorageCombine-Community */,
+				1BDE605D2B991F6C00020678 /* SDWebImageSwiftUI */,
 			);
 			productName = Shopcy;
 			productReference = 1B6A7D112B982AFE003F44BD /* Shopcy.app */;
@@ -257,6 +263,7 @@
 				1BAE3A772B7184C0005C9716 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				1B701DDE2B963CE700911EA1 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				1B81D8FB2B97FBFE00D35F00 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				1BDE605C2B991F6C00020678 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = 1B9BE6652B716C4100EA92A5;
 			projectDirPath = "";
@@ -295,6 +302,7 @@
 				1B9BE6742B716C4100EA92A5 /* SceneDelegate.swift in Sources */,
 				1B557C4E2B964DD100AD03FB /* AuthenticationModel.swift in Sources */,
 				1BAE3A762B71849F005C9716 /* Model.swift in Sources */,
+				1BDE605B2B98E91400020678 /* ProductsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,6 +551,14 @@
 				minimumVersion = 5.8.1;
 			};
 		};
+		1BDE605C2B991F6C00020678 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.6;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -690,6 +706,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1BAE3A772B7184C0005C9716 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		1BDE605D2B991F6C00020678 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1BDE605C2B991F6C00020678 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

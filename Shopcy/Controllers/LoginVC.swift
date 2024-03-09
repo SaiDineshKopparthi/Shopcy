@@ -45,6 +45,10 @@ class LoginVC: UIViewController {
     //Buttons
     @IBOutlet weak var loginBTN: UIButton!
     
+    
+    //Products Array
+    var products: [String : Product] = [:]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -66,7 +70,7 @@ class LoginVC: UIViewController {
         self.messageLBL.text = ""
         Task{
             do{
-                let user = try await AuthenticationManager.shared.signIn(email: username, password: password)
+                _ = try await AuthenticationManager.shared.signIn(email: username, password: password)
                 self.performSegue(withIdentifier: "loginToProducts", sender: self)
             }
             catch {
@@ -79,7 +83,14 @@ class LoginVC: UIViewController {
         
     }
     //MARK: - Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        switch segue.identifier{
+//        case "loginToProducts":
+//            guard let destVC = segue.destination as? ProductsVC else {return}
+//            //destVC.products = self.products
+//        default:
+//            break
+//        }
+//    }
     
 }

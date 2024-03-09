@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -65,7 +66,7 @@
                                                         <rect key="frame" x="0.0" y="39.333333333333258" width="333" height="31.666666666666671"/>
                                                         <color key="backgroundColor" red="0.80504261359999996" green="0.80711866259999998" blue="0.93225524479999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                                         <connections>
                                                             <action selector="exitTextFieldOnReturn:" destination="wE4-BW-4P5" eventType="editingDidEnd" id="Oow-rq-VKN"/>
                                                             <action selector="passwordCheck:" destination="wE4-BW-4P5" eventType="editingChanged" id="dB0-94-a6C"/>
@@ -86,7 +87,7 @@
                                                         <rect key="frame" x="0.0" y="39.666666666666629" width="333" height="31.666666666666671"/>
                                                         <color key="backgroundColor" red="0.80504261359999996" green="0.80711866259999998" blue="0.93225524479999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                                         <connections>
                                                             <action selector="exitTextFieldOnReturn:" destination="wE4-BW-4P5" eventType="editingDidEnd" id="Yk9-6A-lf5"/>
                                                             <action selector="rePasswordCheck:" destination="wE4-BW-4P5" eventType="editingChanged" id="7z4-hK-gvZ"/>
@@ -206,7 +207,7 @@
                                                 <rect key="frame" x="0.0" y="154.66666666666669" width="333" height="69"/>
                                                 <color key="backgroundColor" red="0.80504261363636365" green="0.80711866258741261" blue="0.93225524475524479" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                                 <connections>
                                                     <action selector="exitTextFieldOnReturn:" destination="ve5-nh-H1q" eventType="editingDidEnd" id="mZM-vX-dqm"/>
                                                 </connections>
@@ -435,7 +436,7 @@
         <!--Products-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ProductsVC" customModule="Shopcy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="1180"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -536,8 +537,25 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="G8J-G9-BTe" secondAttribute="bottom" id="jDZ-g5-k2L"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Products" id="UxM-lJ-adL"/>
+                    <navigationItem key="navigationItem" title="Products" id="UxM-lJ-adL">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Logout" id="VdO-7O-IYa"/>
+                            <barButtonItem title="Item" id="K8z-P0-Y0y">
+                                <imageReference key="image" image="cart" catalog="system" symbolScale="large"/>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <size key="freeformSize" width="393" height="1190"/>
+                    <connections>
+                        <outletCollection property="productViewCLCTN" destination="PrW-MT-4Oz" collectionClass="NSMutableArray" id="0mF-ne-dAY"/>
+                        <outletCollection property="productViewCLCTN" destination="pYD-KE-baX" collectionClass="NSMutableArray" id="Qe7-ZO-aMh"/>
+                        <outletCollection property="productViewCLCTN" destination="65i-s7-gCY" collectionClass="NSMutableArray" id="pf0-Zw-ZcC"/>
+                        <outletCollection property="productViewCLCTN" destination="VdO-D6-i48" collectionClass="NSMutableArray" id="41D-ZC-yh9"/>
+                        <outletCollection property="productViewCLCTN" destination="ypQ-w2-Dpw" collectionClass="NSMutableArray" id="mwX-fh-d2i"/>
+                        <outletCollection property="productViewCLCTN" destination="Myg-l2-ikY" collectionClass="NSMutableArray" id="oci-DR-Ghq"/>
+                        <outletCollection property="productViewCLCTN" destination="EUD-6E-q2o" collectionClass="NSMutableArray" id="uY5-fp-OMA"/>
+                        <outletCollection property="productViewCLCTN" destination="o2e-rX-tDZ" collectionClass="NSMutableArray" id="BDF-2E-Ipq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -549,6 +567,7 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Shopcy" width="148" height="37"/>
+        <image name="cart" catalog="system" width="128" height="102"/>
         <image name="shippingbox" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
