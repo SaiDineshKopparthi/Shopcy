@@ -53,7 +53,7 @@ struct FireStoreOperations{
                     let discountPercentage = productData?["discountPercentage"] as? Double ?? 0
                     let rating = productData?["rating"] as? Double ?? 0
                     let thumbnail = productData?["thumbnail"] as? String ?? "N/A"
-                    let images:[String] = productData?["thumbnail"] as? [String] ?? []
+                    let images:[String] = productData?["images"] as? [String] ?? []
                     let cartCount = productData?["cartCount"] as? Int ?? 0
                     
                     let product = Product(title: title, description: description, price: price, discountPercentage: discountPercentage, rating: rating, thumbnail: thumbnail, images: images, cartCount: cartCount)
