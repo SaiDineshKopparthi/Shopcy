@@ -169,7 +169,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AvC-3n-I0u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-593" y="-1368"/>
+            <point key="canvasLocation" x="-593" y="-1206"/>
         </scene>
         <!--Shopcy-->
         <scene sceneID="EDu-p0-O97">
@@ -577,22 +577,21 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="nbI-nt-mhB">
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="69.333333333333329"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jGS-cC-jCD">
-                                                <rect key="frame" x="0.0" y="0.0" width="282.33333333333331" height="69.333333333333329"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wTS-8Z-oA1">
+                                                <rect key="frame" x="0.0" y="0.0" width="322" height="69.333333333333329"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="❤️" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lYP-vj-W98">
-                                                <rect key="frame" x="290.33333333333331" y="0.0" width="62.666666666666686" height="69.333333333333329"/>
+                                                <rect key="frame" x="330" y="0.0" width="23" height="69.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="jGS-cC-jCD" firstAttribute="width" secondItem="nbI-nt-mhB" secondAttribute="width" multiplier="0.8" id="Lqv-6E-1yj"/>
-                                        </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="YqV-A5-SDx">
                                         <rect key="frame" x="0.0" y="77.333333333333314" width="353" height="616.66666666666674"/>
@@ -619,7 +618,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wx8-j7-KiF">
                                                         <rect key="frame" x="0.0" y="0.0" width="353" height="31"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sxd-QU-hqa">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sxd-QU-hqa">
                                                                 <rect key="frame" x="0.0" y="0.0" width="138" height="31"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
@@ -745,7 +744,7 @@
                     <connections>
                         <outlet property="buyBTN" destination="Wkn-DP-djf" id="5KI-Be-mRb"/>
                         <outlet property="cartBTN" destination="iUo-Sg-GCc" id="EyR-xK-a0R"/>
-                        <outlet property="descriptionLBL" destination="jGS-cC-jCD" id="O3o-rS-UpV"/>
+                        <outlet property="descriptionLBL" destination="wTS-8Z-oA1" id="mGd-kG-F6R"/>
                         <outlet property="discountPrice" destination="1GP-al-Vq1" id="d1W-Ed-mc5"/>
                         <outlet property="discountSW" destination="3KU-zS-uKl" id="Ffa-Tl-k8q"/>
                         <outlet property="iemColors" destination="XeX-vQ-zmE" id="MDx-35-rGO"/>
@@ -763,7 +762,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="yRL-eb-Aua"/>
+        <segue reference="x1i-0H-vAm"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Shopcy" width="148" height="37"/>
