@@ -14,7 +14,7 @@ class ProductsVC: UIViewController {
     @IBOutlet var productViewCLCTN: [ProductView]!
     
     var viewTag = 0
-    var productDetail: [Product] = []
+    var productKeys: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,9 +28,9 @@ class ProductsVC: UIViewController {
         switch identifier{
         case "ProductDetail":
             guard let productDetailsVC = segue.destination as? ProductDetailsVC,
-                  let selectedProduct = sender as? Product
+                  let selectedProductKey = sender as? String
             else{return}
-            productDetailsVC.products = [selectedProduct]
+            productDetailsVC.productKey = selectedProductKey
         default:
             break
         }
@@ -44,12 +44,12 @@ class ProductsVC: UIViewController {
             let product = products[key]!
             productViewCLCTN[count].titleLBL.text = product.title
             productViewCLCTN[count].descriptionLBL.text = product.description
-            productViewCLCTN[count].ratingLBL.text = "\(product.rating)/5.0"
-            productViewCLCTN[count].discounAndActualPriceLBL.text = "\(product.discountPercentage)/\(product.price)"
+            productViewCLCTN[count].ratingLBL.text = "\(product.rating) / 5.00"
+            productViewCLCTN[count].discounAndActualPriceLBL.text = "$" + String(format: "%.2f", product.price - ((product.discountPercentage / 100) * product.price)) + " / $" + String(format: "%.2f", product.price)
             productViewCLCTN[count].productIMG.sd_setImage(with: URL(string: product.thumbnail), placeholderImage: UIImage(systemName: "iphone.gen1"))
             
             count += 1
-            productDetail.append(products[key]!)
+            productKeys.append(key)
         }
     }
     
@@ -72,10 +72,12 @@ class ProductsVC: UIViewController {
         viewTag = recognizerView.tag
         switch sender.state {
         case .began:
-            let selectedProduct = productDetail[viewTag]
-            self.performSegue(withIdentifier: "ProductDetail", sender: selectedProduct)
+            let selectedProductKey = productKeys[viewTag]
+            self.performSegue(withIdentifier: "ProductDetail", sender: selectedProductKey)
         default:
             break
         }
     }
 }
+
+

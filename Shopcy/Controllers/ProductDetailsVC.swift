@@ -11,39 +11,37 @@ class ProductDetailsVC: UIViewController {
     
     @IBOutlet weak var descriptionLBL: UITextView!
     
-    @IBOutlet weak var quantityTF: UITextField!
-    
     @IBOutlet weak var ratingLBL: UILabel!
-    @IBOutlet weak var discountPrice: UILabel!
+    @IBOutlet weak var messageLBL: UILabel!
     @IBOutlet weak var priceLBL: UILabel!
     
     @IBOutlet weak var imgIV: UIImageView!
     
     @IBOutlet weak var imageChangePC: UIPageControl!
     
-    @IBOutlet weak var discountSW: UISwitch!
-    
-    @IBOutlet weak var iemColors: UIButton!
+    @IBOutlet weak var itemColors: UIButton!
     @IBOutlet weak var cartBTN: UIButton!
     @IBOutlet weak var buyBTN: UIButton!
     @IBOutlet weak var memorySize: UIButton!
     
-    var products: [Product] = []
+    var productKey: String  = ""
+    var product: Product = Product(title: "", description: "", price: 0, discountPercentage: 0, rating: 0, thumbnail: "", images: [], cartCount: 0)
     var imgCount = 0
     var imageIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = products[0].title
-        descriptionLBL.text = products[0].description
-        ratingLBL.text = String(products[0].rating) + "⭐️"
-        imgIV.sd_setImage(with: URL(string: products[0].thumbnail), placeholderImage: UIImage(systemName: "iphone.gen1"))
-        priceLBL.text = "$" + String(products[0].price)
-        discountSW.isOn = false
-        imageChangePC.numberOfPages = products[0].images.count
+        product = FireStoreOperations.products[productKey]!
         
-        imgCount = products[0].images.count
+        navigationItem.title = product.title
+        descriptionLBL.text = product.description
+        ratingLBL.text = String(product.rating) + "⭐️"
+        imgIV.sd_setImage(with: URL(string: product.thumbnail), placeholderImage: UIImage(systemName: "iphone.gen1"))
+        priceLBL.text = "$" + String(format: "%.2f", product.price - product.price * (product.discountPercentage / 100))
+        imageChangePC.numberOfPages = product.images.count
+        
+        imgCount = product.images.count
         imgIV.isUserInteractionEnabled = true
         
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(swipeImages))
@@ -57,22 +55,9 @@ class ProductDetailsVC: UIViewController {
         imageChangePC.currentPage = imageIndex
         setUpColorButton()
         setSizeButton()
-    }
-    
-    @IBAction func addDiscount(_ sender: UISwitch) {
-        if sender.isOn {
-            let discount = products[0].price * (products[0].discountPercentage / 100)
-            let discountedPrice = products[0].price - discount
-            let formattedDiscount = String(format: "%.2f", discount)
-            let formattedDiscountedPrice = String(format: "%.2f", discountedPrice)
-            discountPrice.text = "\(products[0].discountPercentage)% discount is added. You save $\(formattedDiscount)"
-            priceLBL.text = "$\(formattedDiscountedPrice)"
-        } else {
-            let formattedPrice = String(format: "%.2f", products[0].price)
-            priceLBL.text = "$\(formattedPrice)"
-            discountPrice.text = "No discount added"
-        }
         
+        
+        print(productKey)
     }
     
     
@@ -88,7 +73,7 @@ class ProductDetailsVC: UIViewController {
                 imageIndex = imageIndex - 1
             }
         }
-        imgIV.sd_setImage(with: URL(string: products[0].images[imageIndex]))
+        imgIV.sd_setImage(with: URL(string: product.images[imageIndex]))
         imageChangePC.currentPage = imageIndex
     }
     
@@ -97,15 +82,15 @@ class ProductDetailsVC: UIViewController {
         let options = {(action : UIAction) in
             print(action.title)}
         
-        iemColors.menu = UIMenu(title: "Color", children: [
+        itemColors.menu = UIMenu(title: "Color", children: [
             UIAction(title: "White⬜️", state: .on, handler: options),
             UIAction(title: "Black⬛️", handler: options),
             UIAction(title: "Red🟥", handler: options),
             UIAction(title: "Green🟩", handler: options),
             UIAction(title: "Blue🟦", handler: options)])
         
-        iemColors.showsMenuAsPrimaryAction = true
-        iemColors.changesSelectionAsPrimaryAction = true
+        itemColors.showsMenuAsPrimaryAction = true
+        itemColors.changesSelectionAsPrimaryAction = true
     }
     
     func setSizeButton(){
@@ -124,36 +109,25 @@ class ProductDetailsVC: UIViewController {
         memorySize.changesSelectionAsPrimaryAction = true
     }
     
-    
-    
-    @IBAction func selectColor(_ sender: UIButton) {
-    }
-    
     @IBAction func addToCart(_ sender: UIButton) {
+        FireStoreOperations.products[productKey]!.cartCount = (FireStoreOperations.products[productKey]!.cartCount) + 1
+        print(FireStoreOperations.products[productKey]!.cartCount)
+        Task{
+            await FireStoreOperations.updateProduct(productKey)
+        }
+        self.messageLBL.text = "Item Added To Cart"
+        sender.isEnabled = false
     }
     
     @IBAction func buy(_ sender: UIButton) {
-        guard let quantity = Int(quantityTF.text ?? "1"), quantity > 0 else {
-            return
-        }
         
-        var totalPrice = Double(products[0].price) * Double(quantity)
-        if discountSW.isOn {
-            let discount = Double(products[0].discountPercentage / 100) * Double(products[0].price)
-            totalPrice -= discount
-        }
+        let price = Double(product.price) - (Double(product.discountPercentage / 100) * Double(product.price))
         
-        let formattedTotalPrice = String(format: "%.2f", totalPrice)
+        let formattedTotalPrice = String(format: "%.2f", price)
         let selectedSize = memorySize.title(for: .normal) ?? ""
-        let selectedColor = iemColors.title(for: .normal) ?? ""
-        let selectedQuantity = quantityTF.text ?? "1"
+        let selectedColor = itemColors.title(for: .normal) ?? ""
         
-        var message = "Price: \(formattedTotalPrice)\nSize: \(selectedSize)\nColor: \(selectedColor)\nQuantity: \(selectedQuantity)"
-        
-        if discountSW.isOn {
-            let discountAmount = discountPrice.text ?? "0"
-            message += "\nDiscount: \(discountAmount)"
-        }
+        let message = "Price: \(formattedTotalPrice)\nSize: \(selectedSize)\nColor: \(selectedColor)"
         
         let confirmAlert = UIAlertController(title: "Confirm Order", message: message, preferredStyle: .alert)
         confirmAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))

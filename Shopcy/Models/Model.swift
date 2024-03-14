@@ -66,4 +66,15 @@ struct FireStoreOperations{
             }
         }
     }
+    
+    public static func updateProduct(_ key: String) async{
+        let product = products[key]!
+        do {
+            try await db.collection("Products").document(key).updateData([
+                "cartCount" : product.cartCount
+            ])
+        } catch {
+            print("Error updating cart count: \(error)")
+        }
+    }
 }
