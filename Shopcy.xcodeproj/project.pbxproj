@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1B1D48BE2BA2C5550086181A /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1D48BD2BA2C5550086181A /* ProductTableViewCell.swift */; };
 		1B1D48C22BA2C7CA0086181A /* CartTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1D48C12BA2C7CA0086181A /* CartTableVC.swift */; };
+		1B2F6BF42BA40E5C00985451 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4568442BA40D900026E5EF /* SplashVC.swift */; };
 		1B557C4E2B964DD100AD03FB /* AuthenticationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B557C4D2B964DD100AD03FB /* AuthenticationModel.swift */; };
 		1B71F1972B9651DB0046DCB2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B71F1962B9651DB0046DCB2 /* GoogleService-Info.plist */; };
 		1B81D9332B98042000D35F00 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B81D9322B98042000D35F00 /* CreateAccountVC.swift */; };
@@ -23,8 +24,6 @@
 		1BDE605B2B98E91400020678 /* ProductsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDE605A2B98E91400020678 /* ProductsVC.swift */; };
 		1BE5F2642B741C5E00D6019A /* ProductView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BE5F2632B741C5E00D6019A /* ProductView.xib */; };
 		1BE5F2682B74206900D6019A /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE5F2672B74206900D6019A /* ProductView.swift */; };
-		BDF781642B9C409200E06A45 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = BDF781632B9C409200E06A45 /* Alamofire */; };
-		BDF781662B9C409200E06A45 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = BDF781652B9C409200E06A45 /* AlamofireDynamic */; };
 		BDF781692B9C40F600E06A45 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = BDF781682B9C40F600E06A45 /* Lottie */; };
 		BDF7816C2B9C415D00E06A45 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = BDF7816B2B9C415D00E06A45 /* FirebaseAnalytics */; };
 		BDF7816E2B9C415D00E06A45 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = BDF7816D2B9C415D00E06A45 /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -60,6 +59,7 @@
 /* Begin PBXFileReference section */
 		1B1D48BD2BA2C5550086181A /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProductTableViewCell.swift; path = Shopcy/ProductTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		1B1D48C12BA2C7CA0086181A /* CartTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableVC.swift; sourceTree = "<group>"; };
+		1B4568442BA40D900026E5EF /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
 		1B557C4D2B964DD100AD03FB /* AuthenticationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationModel.swift; sourceTree = "<group>"; };
 		1B6A7D112B982AFE003F44BD /* Shopcy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shopcy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B71F1962B9651DB0046DCB2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -99,9 +99,7 @@
 				BDF781982B9C415D00E06A45 /* FirebasePerformance in Frameworks */,
 				BDF781842B9C415D00E06A45 /* FirebaseFirestore in Frameworks */,
 				BDF781A32B9C418600E06A45 /* SDWebImageSwiftUI in Frameworks */,
-				BDF781642B9C409200E06A45 /* Alamofire in Frameworks */,
 				BDF7818E2B9C415D00E06A45 /* FirebaseInAppMessaging-Beta in Frameworks */,
-				BDF781662B9C409200E06A45 /* AlamofireDynamic in Frameworks */,
 				BDF7816E2B9C415D00E06A45 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
 				BDF7819C2B9C415D00E06A45 /* FirebaseRemoteConfigSwift in Frameworks */,
 				BDF7817A2B9C415D00E06A45 /* FirebaseAuthCombine-Community in Frameworks */,
@@ -175,12 +173,13 @@
 		1BA3802C2B7E73D400F89CD0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1B1D48C12BA2C7CA0086181A /* CartTableVC.swift */,
-				BDF781A42B9C43B900E06A45 /* ProductDetailsVC.swift */,
+				1B4568442BA40D900026E5EF /* SplashVC.swift */,
 				1BA3802A2B7E73C900F89CD0 /* LoginVC.swift */,
-				1BDE605A2B98E91400020678 /* ProductsVC.swift */,
 				1B81D9322B98042000D35F00 /* CreateAccountVC.swift */,
 				1B81D9342B980B9D00D35F00 /* ResetPasswordVC.swift */,
+				1BDE605A2B98E91400020678 /* ProductsVC.swift */,
+				BDF781A42B9C43B900E06A45 /* ProductDetailsVC.swift */,
+				1B1D48C12BA2C7CA0086181A /* CartTableVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -211,8 +210,6 @@
 			);
 			name = Shopcy;
 			packageProductDependencies = (
-				BDF781632B9C409200E06A45 /* Alamofire */,
-				BDF781652B9C409200E06A45 /* AlamofireDynamic */,
 				BDF781682B9C40F600E06A45 /* Lottie */,
 				BDF7816B2B9C415D00E06A45 /* FirebaseAnalytics */,
 				BDF7816D2B9C415D00E06A45 /* FirebaseAnalyticsOnDeviceConversion */,
@@ -272,7 +269,6 @@
 			);
 			mainGroup = 1B9BE6652B716C4100EA92A5;
 			packageReferences = (
-				BDF781622B9C409200E06A45 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				BDF781672B9C40F600E06A45 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				BDF7816A2B9C415D00E06A45 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				BDF781A12B9C418600E06A45 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
@@ -314,6 +310,7 @@
 				1B81D9352B980B9D00D35F00 /* ResetPasswordVC.swift in Sources */,
 				1B9BE6742B716C4100EA92A5 /* SceneDelegate.swift in Sources */,
 				1B557C4E2B964DD100AD03FB /* AuthenticationModel.swift in Sources */,
+				1B2F6BF42BA40E5C00985451 /* SplashVC.swift in Sources */,
 				BDF781A52B9C43B900E06A45 /* ProductDetailsVC.swift in Sources */,
 				1BAE3A762B71849F005C9716 /* Model.swift in Sources */,
 				1BDE605B2B98E91400020678 /* ProductsVC.swift in Sources */,
@@ -542,14 +539,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		BDF781622B9C409200E06A45 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.9.0;
-			};
-		};
 		BDF781672B9C40F600E06A45 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
@@ -577,16 +566,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		BDF781632B9C409200E06A45 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BDF781622B9C409200E06A45 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-		BDF781652B9C409200E06A45 /* AlamofireDynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BDF781622B9C409200E06A45 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = AlamofireDynamic;
-		};
 		BDF781682B9C40F600E06A45 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BDF781672B9C40F600E06A45 /* XCRemoteSwiftPackageReference "lottie-ios" */;

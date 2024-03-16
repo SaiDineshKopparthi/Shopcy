@@ -18,22 +18,6 @@ class LoginVC: UIViewController {
             loginLAV.play()
         }
     }
-    @IBOutlet weak var launchLAV: LottieAnimationView!{
-        didSet{
-            launchLAV.animation = LottieAnimation.named("Shopcy_Launch")
-            launchLAV.loopMode = .playOnce
-            launchLAV.alpha = 1.0
-            launchLAV.play{ [weak self] _ in
-                UIViewPropertyAnimator.runningPropertyAnimator(
-                    withDuration: 1.0,
-                    delay: 0.0,
-                    options: [.curveEaseInOut]){
-                        self?.launchLAV.alpha = 0.0
-                    }
-                
-            }
-        }
-    }
     
     //Labels
     @IBOutlet weak var messageLBL: UILabel!
@@ -62,6 +46,7 @@ class LoginVC: UIViewController {
             self.messageLBL.text = "Please enter Username!"
             return
         }
+        
         guard let password = self.passwordTF.text, !password.isEmpty else{
             self.messageLBL.text = "Please enter Password!"
             return
@@ -76,21 +61,7 @@ class LoginVC: UIViewController {
             catch {
                 print(error)
                 self.messageLBL.text = "Invalid Login Credentials! Please try again."
-                
             }
-            
         }
-        
     }
-    //MARK: - Navigation
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        switch segue.identifier{
-//        case "loginToProducts":
-//            guard let destVC = segue.destination as? ProductsVC else {return}
-//            //destVC.products = self.products
-//        default:
-//            break
-//        }
-//    }
-    
 }

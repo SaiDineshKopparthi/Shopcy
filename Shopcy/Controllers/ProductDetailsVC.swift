@@ -111,7 +111,7 @@ class ProductDetailsVC: UIViewController {
     
     @IBAction func addToCart(_ sender: UIButton) {
         FireStoreOperations.products[productKey]!.cartCount = (FireStoreOperations.products[productKey]!.cartCount) + 1
-        print(FireStoreOperations.products[productKey]!.cartCount)
+        
         Task{
             await FireStoreOperations.updateProduct(productKey)
         }
