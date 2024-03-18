@@ -24,6 +24,12 @@ class CreateAccountVC: UIViewController {
         super.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationItem.title = ""
+        self.navigationItem.hidesBackButton = true
+    }
+    
     @IBAction func passwordCheck(_ sender: UITextField) {
         guard let password = sender.text, !(self.checkPasswordTF.text!).isEmpty, password == self.checkPasswordTF.text else{
             self.messageLBL.text = "Password should match!"

@@ -9,7 +9,7 @@ import UIKit
 
 class ProductDetailsVC: UIViewController {
     
-    @IBOutlet weak var descriptionLBL: UITextView!
+    @IBOutlet weak var descriptionTV: UITextView!
     
     @IBOutlet weak var ratingLBL: UILabel!
     @IBOutlet weak var messageLBL: UILabel!
@@ -35,7 +35,7 @@ class ProductDetailsVC: UIViewController {
         product = FireStoreOperations.products[productKey]!
         
         navigationItem.title = product.title
-        descriptionLBL.text = product.description
+        descriptionTV.text = product.description
         ratingLBL.text = String(product.rating) + "⭐️"
         imgIV.sd_setImage(with: URL(string: product.thumbnail), placeholderImage: UIImage(systemName: "iphone.gen1"))
         priceLBL.text = "$" + String(format: "%.2f", product.price - product.price * (product.discountPercentage / 100))
@@ -140,4 +140,30 @@ class ProductDetailsVC: UIViewController {
         present(confirmAlert, animated: true, completion: nil)
     }
     
+    @IBAction func logout(_ sender: UIBarButtonItem) {
+        let logoutAlert = UIAlertController(title: "Logout", message: "Would you like to logout?", preferredStyle: .alert)
+        logoutAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        logoutAlert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { _ in
+            do{
+                try AuthenticationManager.shared.signOut()
+            }
+            catch{
+                print("Logout error: \(error.localizedDescription)")
+            }
+            self.performSegue(withIdentifier: "productDetailsToLogin", sender: self)
+        }))
+        
+        self.present(logoutAlert, animated: true, completion: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "productDetailsToLogin":
+            let destVC = segue.destination as? LoginVC
+            destVC?.navigationItem.title = ""
+            destVC?.navigationItem.hidesBackButton = true
+        default:
+            break
+        }
+    }
 }

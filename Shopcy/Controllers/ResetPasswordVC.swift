@@ -19,8 +19,13 @@ class ResetPasswordVC: UIViewController {
         super.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationItem.title = ""
+        self.navigationItem.hidesBackButton = true
+    }
     
-    @IBAction func sendLinkBTN(_ sender: UIButton) {
+    @IBAction func onClickSendLink(_ sender: UIButton) {
         guard let email = self.emailTF.text, !email.isEmpty else {
             self.messageLBL.text = "Please enter email!"
             return

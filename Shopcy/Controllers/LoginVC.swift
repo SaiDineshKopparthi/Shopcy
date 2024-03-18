@@ -37,6 +37,12 @@ class LoginVC: UIViewController {
         super.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationItem.title = ""
+        self.navigationItem.hidesBackButton = true
+    }
+    
     @IBAction func exitTextFieldOnReturn(_ sender: UITextField) {
     }
     

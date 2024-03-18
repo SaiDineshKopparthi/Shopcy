@@ -31,6 +31,10 @@ class ProductsVC: UIViewController {
                   let selectedProductKey = sender as? String
             else{return}
             productDetailsVC.productKey = selectedProductKey
+        case "productsToLogin":
+            let destVC = segue.destination as? LoginVC
+            destVC?.navigationItem.title = ""
+            destVC?.navigationItem.hidesBackButton = true
         default:
             break
         }
@@ -77,6 +81,23 @@ class ProductsVC: UIViewController {
         default:
             break
         }
+    }
+    
+    
+    @IBAction func logout(_ sender: UIBarButtonItem) {
+        let logoutAlert = UIAlertController(title: "Logout", message: "Would you like to logout?", preferredStyle: .alert)
+        logoutAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        logoutAlert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { _ in
+            do{
+                try AuthenticationManager.shared.signOut()
+            }
+            catch{
+                print("Logout error: \(error.localizedDescription)")
+            }
+            self.performSegue(withIdentifier: "productsToLogin", sender: self)
+        }))
+        
+        self.present(logoutAlert, animated: true, completion: nil)
     }
 }
 

@@ -33,7 +33,6 @@ class ProductView: UIView {
         viewOfXib.frame = self.bounds
         viewOfXib.layer.cornerRadius = 5
         viewOfXib.layer.borderWidth = 2
-        //viewOfXib.layer.borderColor = CGColor(red: 110, green: 90, blue: 238, alpha: 1)
         self.addSubview(viewOfXib)
     }
 
