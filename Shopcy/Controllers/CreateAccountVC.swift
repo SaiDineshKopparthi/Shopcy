@@ -65,7 +65,7 @@ class CreateAccountVC: UIViewController {
         self.messageLBL.text = ""
         Task {
             do{
-                _ = try await AuthenticationManager.shared.createUser(email: email, password: password)
+                try await AuthenticationManager.shared.createUser(email: email, password: password)
                 self.performSegue(withIdentifier: "createAccountToLogin", sender: sender)
                 
             } catch {

@@ -61,7 +61,7 @@ class LoginVC: UIViewController {
         self.messageLBL.text = ""
         Task{
             do{
-                _ = try await AuthenticationManager.shared.signIn(email: username, password: password)
+                try await AuthenticationManager.shared.signIn(email: username, password: password)
                 self.performSegue(withIdentifier: "loginToProducts", sender: self)
             }
             catch {
